@@ -1,0 +1,31 @@
+return {
+  servers = {
+    gopls = {},
+    ts_ls = {}, -- JavaScript and TypeScript (including JSX and TSX)
+    pyright = {},
+    ruby_lsp = {},
+    jdtls = {},
+    kotlin_language_server = {},
+    lua_ls = { settings = { Lua = { completion = { callSnippet = 'Replace' } } } },
+  },
+  parsers = {
+    'bash',
+    'c',
+    'diff',
+    'go',
+    'html',
+    'java',
+    'javascript',
+    'json',
+    'kotlin',
+    'lua',
+    'luadoc',
+    'markdown',
+    'python',
+    'ruby',
+    'tsx',
+    'typescript',
+    'vim',
+    'vimdoc',
+  },
+}
