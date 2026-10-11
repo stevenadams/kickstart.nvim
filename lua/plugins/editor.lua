@@ -25,8 +25,13 @@ return {
   },
   {
     'stevearc/oil.nvim',
+    lazy = false, -- Take over directory buffers before netrw handles `nvim .` or `:edit dir`.
     dependencies = { 'nvim-tree/nvim-web-devicons' },
-    opts = { view_options = { show_hidden = true } },
+    opts = {
+      default_file_explorer = true,
+      view_options = { show_hidden = true },
+      win_options = { number = true, relativenumber = true },
+    },
     keys = { { '-', '<cmd>Oil<CR>', desc = 'Open parent directory' } },
   },
   {
