@@ -8,6 +8,7 @@ return {
     kotlin_language_server = {},
     lua_ls = { settings = { Lua = { completion = { callSnippet = 'Replace' } } } },
   },
+  tools = { 'stylua', 'prettier', 'ruff', 'rubocop', 'shellcheck' },
   parsers = {
     'bash',
     'c',

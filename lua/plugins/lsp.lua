@@ -64,7 +64,7 @@ return {
     end
 
     require('mason').setup()
-    require('mason-tool-installer').setup { ensure_installed = { 'stylua' }, run_on_start = #vim.api.nvim_list_uis() > 0 }
+    require('mason-tool-installer').setup { ensure_installed = require('config.languages').tools, run_on_start = #vim.api.nvim_list_uis() > 0 }
     require('mason-lspconfig').setup { ensure_installed = vim.tbl_keys(servers), automatic_enable = false }
     vim.lsp.enable(vim.tbl_keys(servers))
   end,

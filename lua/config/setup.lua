@@ -15,7 +15,7 @@ end
 
 local function packages()
   local mapping = require('mason-lspconfig').get_mappings().lspconfig_to_package
-  local names = { 'stylua' }
+  local names = vim.deepcopy(languages.tools)
   for server in pairs(languages.servers) do
     assert(mapping[server], 'No Mason package mapped for ' .. server)
     names[#names + 1] = mapping[server]
